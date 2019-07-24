@@ -136,7 +136,7 @@ npm run cov-e2e
 
 - start kafka server, start elasticsearch, initialize Elasticsearch, start processor app
 
-- run command `npm run view-data 173803d3-019e-4033-b1cf-d7205c7f774c` to view the data created by `init-es`
+- run command `npm run view-data 173803d3-019e-4033-b1cf-d7205c7f774c` to view the test challenge doc created by `init-es`
 
 ```bash
 info: Elasticsearch data:
