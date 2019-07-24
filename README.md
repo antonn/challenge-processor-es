@@ -97,8 +97,11 @@ Please ensure to create the index `challenge-test` or the index specified in the
 export ES_INDEX=challenge-test
 ```
 
-Or, you may temporarily modify the esConfig.ES_INDEX in config/default.js to `challenge-test` and run `npm run init-es` to create test index.
+Or, you may temporarily modify the esConfig.ES_INDEX in config/default.js to `challenge-test` and run the following command to create test index.
 
+```
+npm run init-es
+```
 
 #### Running unit tests and coverage
 
