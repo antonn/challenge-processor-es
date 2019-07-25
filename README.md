@@ -156,30 +156,21 @@ info: {
     "typeId": "8e17090c-465b-4c17-b6d9-dfa16300b0ff",
     "track": "Code",
     "name": "test challenge",
-    "description": "some description",
-    "challengeSettings": [
-        { 
-            "type": "8e17090c-465b-4c17-b6d9-dfa16300b0aa", 
-            "value": "value" 
-         }
-    ],
+    "description": "desc",
     "timelineTemplateId": "8e17090c-465b-4c17-b6d9-dfa16300b0aa",
     "phases": [
         {
             "id": "8e17090c-465b-4c17-b6d9-dfa16300b012",
             "name": "review",
-            "description": "review phase",
             "isActive": true,
             "duration": 10000
         }
     ],
     "prizeSets": [
         {
-            "type": "winning prize",
-            "description": 'prize desc',
+            "type": "prize",
             "prizes": [
                 {
-                    "description": "winner prize",
                     "type": "winning prize",
                     "value": 500
                 }
@@ -190,12 +181,10 @@ info: {
     "tags": [
         "code"
     ],
-    "projectId": 12345,
-    "forumId": 123123,
-    "legacyId": 787878,
+    "projectId": 123,
+    "forumId": 456,
     "status": "Active",
-    "groups": ["group1", "group2"],
-    "created": "2018-01-01T16:00:00.000Z",
+    "created": "2018-01-01T18:30:00.000Z",
     "createdBy": "admin"
 }
 info: Done!
