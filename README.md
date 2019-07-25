@@ -139,55 +139,7 @@ npm run cov-e2e
 - run command `npm run view-data 173803d3-019e-4033-b1cf-d7205c7f774c` to view the test challenge doc created by `init-es`
 
 ```bash
-info: Elasticsearch data:
-info: {
-    "id": "173803d3-019e-4033-b1cf-d7205c7f774c",
-    "typeId": "8e17090c-465b-4c17-b6d9-dfa16300b0ff",
-    "track": "Code",
-    "name": "test challenge",
-    "description": "some description",
-    "challengeSettings": [
-        { 
-            "type": "8e17090c-465b-4c17-b6d9-dfa16300b0aa", 
-            "value": "value" 
-         }
-    ],
-    "timelineTemplateId": "8e17090c-465b-4c17-b6d9-dfa16300b0aa",
-    "phases": [
-        {
-            "id": "8e17090c-465b-4c17-b6d9-dfa16300b012",
-            "name": "review",
-            "description": "review phase",
-            "isActive": true,
-            "duration": 10000
-        }
-    ],
-    "prizeSets": [
-        {
-            "type": "winning prize",
-            "description": 'prize desc',
-            "prizes": [
-                {
-                    "description": "winner prize",
-                    "type": "winning prize",
-                    "value": 500
-                }
-            ]
-        }
-    ],
-    "reviewType": "code review",
-    "tags": [
-        "code"
-    ],
-    "projectId": 12345,
-    "forumId": 123123,
-    "legacyId": 787878,
-    "status": "Active",
-    "groups": ["group1", "group2"],
-    "created": "2018-01-01T16:00:00.000Z",
-    "createdBy": "admin"
-}
-info: Done!
+npm run view-data 173803d3-019e-4033-b1cf-d7205c7f774c
 ```
 
 - start kafka-console-producer to write messages to `challenge.notification.update` topic:
