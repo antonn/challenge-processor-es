@@ -136,9 +136,19 @@ npm run cov-e2e
 
 ## Verification
 
-- start kafka server, start elasticsearch, initialize Elasticsearch `npm run init-es force`, start processor app `npm run`
+- start kafka server, start elasticsearch
 
-- Open new terminal and run command `npm run view-data 173803d3-019e-4033-b1cf-d7205c7f774c` to view the test challenge doc created by `init-es`
+- Ensure you set correct ES_INDEX env variable. Incase if you had changed for unit and integration test above, change it back to usual index
+
+```
+export ES_INDEX=challenge
+```
+
+- start processor app `npm run`
+
+- Open new terminal, initialize Elasticsearch `npm run init-es force`, 
+
+- Run command `npm run view-data 173803d3-019e-4033-b1cf-d7205c7f774c` to verify the test challenge doc created by `init-es` 
 
 ```bash
 npm run view-data 173803d3-019e-4033-b1cf-d7205c7f774c
