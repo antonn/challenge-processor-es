@@ -199,50 +199,61 @@ info: Done!
 info: Elasticsearch data:
 info: {
     "id": "173803d3-019e-4033-b1cf-d7205c7f774c",
-    "typeId": "8e17090c-465b-4c17-b6d9-dfa16300b0ff",
+    "typeId": "45415132-79fa-4d13-a9ac-71f50020dc10",
     "track": "Code",
-    "name": "test challenge",
-    "description": "some description",
-    "challengeSettings": [
-        { 
-            "type": "8e17090c-465b-4c17-b6d9-dfa16300b0aa", 
-            "value": "value" 
-         }
-    ],
+    "name": "test",
+    "description": "a b c",
     "timelineTemplateId": "8e17090c-465b-4c17-b6d9-dfa16300b0aa",
     "phases": [
         {
-            "id": "8e17090c-465b-4c17-b6d9-dfa16300b012",
+            "duration": 20,
             "name": "review",
-            "description": "review phase",
-            "isActive": true,
-            "duration": 10000
+            "id": "8e17090c-465b-4c17-b6d9-dfa16300b012",
+            "isActive": true
         }
     ],
     "prizeSets": [
         {
-            "type": "winning prize",
-            "description": 'prize desc',
             "prizes": [
                 {
-                    "description": "winner prize",
-                    "type": "winning prize",
-                    "value": 500
+                    "type": "win",
+                    "value": 90
                 }
-            ]
+            ],
+            "type": "prize"
         }
     ],
-    "reviewType": "code review",
+    "reviewType": "code",
     "tags": [
-        "code"
+        "tag1",
+        "tag2"
     ],
-    "projectId": 12345,
-    "forumId": 123123,
-    "legacyId": 787878,
+    "projectId": 12,
+    "forumId": 45,
     "status": "Active",
-    "groups": ["group1", "group2"],
-    "created": "2018-01-01T16:00:00.000Z",
-    "createdBy": "admin"
+    "created": "2018-01-01T18:30:00.000Z",
+    "createdBy": "admin",
+    "attachments": [
+        {
+            "fileName": "t.txt",
+            "challengeId": "173803d3-019e-4033-b1cf-d7205c7f774c",
+            "fileSize": 88,
+            "id": "8e17091c-466b-4c17-b6d9-dfa16300b234"
+        }
+    ],
+    "updatedBy": "user",
+    "groups": [
+        "g1",
+        "g2"
+    ],
+    "challengeSettings": [
+        {
+            "type": "2d88c598-70f0-4054-8a45-7da38d0ca424",
+            "value": "ab"
+        }
+    ],
+    "legacyId": 55,
+    "updated": "2019-02-16T18:30:00.000Z"
 }
 info: Done!
 ```
