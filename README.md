@@ -149,7 +149,7 @@ info: {
     "id": "173803d3-019e-4033-b1cf-d7205c7f774c",
     "typeId": "8e17090c-465b-4c17-b6d9-dfa16300b0ff",
     "track": "Code",
-    "name": "test challenge",
+    "name": "test",
     "description": "desc",
     "timelineTemplateId": "8e17090c-465b-4c17-b6d9-dfa16300b0aa",
     "phases": [
@@ -188,7 +188,7 @@ info: Done!
   `bin/kafka-console-producer.sh --broker-list localhost:9092 --topic challenge.notification.update`
 
 - write message to partially update data:
-  `{ "topic": "challenge.notification.update", "originator": "challenge-api", "timestamp": "2019-02-17T01:00:00", "mime-type": "application/json", "payload": { "id": "173803d3-019e-4033-b1cf-d7205c7f774c", "typeId": "8e17090c-465b-4c17-b6d9-dfa16300b0ff", "track": "Code", "name": "test challenge3", "description": "desc3", "timelineTemplateId": "8e17090c-465b-4c17-b6d9-dfa16300b0dd", "groups": ["group2", "group3"], "updated": "2019-02-17T01:00:00", "updatedBy": "admin" } }`
+  `{ "topic": "challenge.notification.update", "originator": "challenge-api", "timestamp": "2019-02-17T01:00:00", "mime-type": "application/json", "payload": { "id": "173803d3-019e-4033-b1cf-d7205c7f774c", "typeId": "8e17090c-465b-4c17-b6d9-dfa16300b0ff", "track": "Code", "name": "test3", "description": "desc3", "timelineTemplateId": "8e17090c-465b-4c17-b6d9-dfa16300b0dd", "groups": ["group2", "group3"], "updated": "2019-02-17T01:00:00", "updatedBy": "admin" } }`
 - run command `npm run view-data 173803d3-019e-4033-b1cf-d7205c7f774c` to view the updated data, you will see the data are properly updated:
 
 ```bash
@@ -197,7 +197,7 @@ info: {
     "id": "173803d3-019e-4033-b1cf-d7205c7f774c",
     "typeId": "8e17090c-465b-4c17-b6d9-dfa16300b0ff",
     "track": "Code",
-    "name": "test challenge3",
+    "name": "test3",
     "description": "desc3",
     "timelineTemplateId": "8e17090c-465b-4c17-b6d9-dfa16300b0dd",
     "phases": [
