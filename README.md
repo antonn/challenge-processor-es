@@ -141,13 +141,7 @@ npm run cov-e2e
 ```bash
 npm run view-data 173803d3-019e-4033-b1cf-d7205c7f774c
 ```
-
-- start kafka-console-producer to write messages to `challenge.notification.update` topic:
-  `bin/kafka-console-producer.sh --broker-list localhost:9092 --topic challenge.notification.update`
-
-- write message to partially update data:
-  `{ "topic": "challenge.notification.update", "originator": "challenge-api", "timestamp": "2019-02-17T01:00:00", "mime-type": "application/json", "payload": { "id": "173803d3-019e-4033-b1cf-d7205c7f774c", "typeId": "8e17090c-465b-4c17-b6d9-dfa16300b0ff", "track": "Code", "name": "test3", "description": "desc3", "timelineTemplateId": "8e17090c-465b-4c17-b6d9-dfa16300b0dd", "groups": ["group2", "group3"], "updated": "2019-02-17T01:00:00", "updatedBy": "admin" } }`
-- run command `npm run view-data 173803d3-019e-4033-b1cf-d7205c7f774c` to view the updated data, you will see the data are properly updated:
+- It should display the following message
 
 ```bash
 info: Elasticsearch data:
@@ -190,9 +184,63 @@ info: {
 info: Done!
 ```
 
+- start kafka-console-producer to write messages to `challenge.notification.update` topic:
+  `bin/kafka-console-producer.sh --broker-list localhost:9092 --topic challenge.notification.update`
+
+- write message to partially update data:
+  `{ "topic": "challenge.notification.update", "originator": "challenge-api", "timestamp": "2019-02-17T01:00:00", "mime-type": "application/json", "payload": { "id": "173803d3-019e-4033-b1cf-d7205c7f774c", "typeId": "8e17090c-465b-4c17-b6d9-dfa16300b0ff", "track": "Code", "name": "test challenge3", "description": "desc3", "timelineTemplateId": "8e17090c-465b-4c17-b6d9-dfa16300b0dd", "groups": ["group2", "group3"], "updated": "2019-02-17T01:00:00", "updatedBy": "admin" } }`
+- run command `npm run view-data 173803d3-019e-4033-b1cf-d7205c7f774c` to view the updated data, you will see the data are properly updated:
+
+```bash
+info: Elasticsearch data:
+info: {
+    "id": "173803d3-019e-4033-b1cf-d7205c7f774c",
+    "typeId": "8e17090c-465b-4c17-b6d9-dfa16300b0ff",
+    "track": "Code",
+    "name": "test challenge3",
+    "description": "desc3",
+    "timelineTemplateId": "8e17090c-465b-4c17-b6d9-dfa16300b0dd",
+    "phases": [
+        {
+            "id": "8e17090c-465b-4c17-b6d9-dfa16300b012",
+            "name": "review",
+            "isActive": true,
+            "duration": 10000
+        }
+    ],
+    "prizeSets": [
+        {
+            "type": "prize",
+            "prizes": [
+                {
+                    "type": "winning prize",
+                    "value": 500
+                }
+            ]
+        }
+    ],
+    "reviewType": "code review",
+    "tags": [
+        "code"
+    ],
+    "projectId": 123,
+    "forumId": 456,
+    "status": "Active",
+    "created": "2018-01-01T18:30:00.000Z",
+    "createdBy": "admin",
+    "updatedBy": "admin",
+    "groups": [
+        "group2",
+        "group3"
+    ],
+    "updated": "2019-02-16T19:30:00.000Z"
+}
+info: Done!
+```
+
 
 - write message to update data:
-  `{ "topic": "challenge.notification.update", "originator": "challenge-api", "timestamp": "2019-02-17T00:00:00", "mime-type": "application/json", "payload": { "id": "173803d3-019e-4033-b1cf-d7205c7f774c", "typeId": "45415132-79fa-4d13-a9ac-71f50020dc10", "track": "Code", "name": "test", "description": "a b c", "challengeSettings": [{ "type": "2d88c598-70f0-4054-8a45-7da38d0ca424", "value": "ab" }], "timelineTemplateId": "8e17090c-465b-4c17-b6d9-dfa16300b0aa", "phases": [{ "id": "8e17090c-465b-4c17-b6d9-dfa16300b012", "name": "review", "isActive": true, "duration": 20 }], "prizeSets": [{ "type": "prize", "prizes": [{ "type": "win", "value": 90 }] }], "reviewType": "code", "tags": ["tag1", "tag2"], "projectId": 12, "forumId": 45, "legacyId": 55, "status": "Active", "attachments": [{ "id": "8e17091c-466b-4c17-b6d9-dfa16300b234", "fileSize": 88, "fileName": "t.txt", "challengeId": "173803d3-019e-4033-b1cf-d7205c7f774c" }], "groups": ["g1", "g2"], "updated": "2019-02-17T00:00:00", "updatedBy": "user" } }`
+  `{ "topic": "challenge.notification.update", "originator": "challenge-api", "timestamp": "2019-02-17T00:00:00", "mime-type": "application/json", "payload": { "id": "173803d3-019e-4033-b1cf-d7205c7f774c", "typeId": "45415132-79fa-4d13-a9ac-71f50020dc10", "track": "Code", "name": "test challenge", "description": "a b c", "challengeSettings": [{ "type": "2d88c598-70f0-4054-8a45-7da38d0ca424", "value": "ab" }], "timelineTemplateId": "8e17090c-465b-4c17-b6d9-dfa16300b0aa", "phases": [{ "id": "8e17090c-465b-4c17-b6d9-dfa16300b012", "name": "review", "isActive": true, "duration": 20 }], "prizeSets": [{ "type": "prize", "prizes": [{ "type": "win", "value": 90 }] }], "reviewType": "code", "tags": ["tag1", "tag2"], "projectId": 12, "forumId": 45, "legacyId": 55, "status": "Active", "attachments": [{ "id": "8e17091c-466b-4c17-b6d9-dfa16300b234", "fileSize": 88, "fileName": "t.txt", "challengeId": "173803d3-019e-4033-b1cf-d7205c7f774c" }], "groups": ["g1", "g2"], "updated": "2019-02-17T00:00:00", "updatedBy": "user" } }`
 - run command `npm run view-data 173803d3-019e-4033-b1cf-d7205c7f774c` to view the updated data, you will see the data are properly updated:
 
 ```bash
@@ -201,7 +249,7 @@ info: {
     "id": "173803d3-019e-4033-b1cf-d7205c7f774c",
     "typeId": "45415132-79fa-4d13-a9ac-71f50020dc10",
     "track": "Code",
-    "name": "test",
+    "name": "test challenge",
     "description": "a b c",
     "timelineTemplateId": "8e17090c-465b-4c17-b6d9-dfa16300b0aa",
     "phases": [
@@ -233,6 +281,12 @@ info: {
     "status": "Active",
     "created": "2018-01-01T18:30:00.000Z",
     "createdBy": "admin",
+    "updatedBy": "user",
+    "groups": [
+        "g1",
+        "g2"
+    ],
+    "updated": "2019-02-16T18:30:00.000Z",
     "attachments": [
         {
             "fileName": "t.txt",
@@ -241,19 +295,13 @@ info: {
             "id": "8e17091c-466b-4c17-b6d9-dfa16300b234"
         }
     ],
-    "updatedBy": "user",
-    "groups": [
-        "g1",
-        "g2"
-    ],
     "challengeSettings": [
         {
             "type": "2d88c598-70f0-4054-8a45-7da38d0ca424",
             "value": "ab"
         }
     ],
-    "legacyId": 55,
-    "updated": "2019-02-16T18:30:00.000Z"
+    "legacyId": 55
 }
 info: Done!
 ```
