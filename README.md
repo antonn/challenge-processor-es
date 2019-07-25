@@ -103,7 +103,7 @@ Or, you may temporarily modify the esConfig.ES_INDEX in config/default.js to `ch
 npm run init-es
 ```
 
-Note: `init-es` creates a test challenge in the newly created index with id `173803d3-019e-4033-b1cf-d7205c7f774c` for test verification
+Note: `init-es` creates a test challenge in the newly created index with id `173803d3-019e-4033-b1cf-d7205c7f774c` for update verification steps below
 
 #### Running unit tests and coverage
 
