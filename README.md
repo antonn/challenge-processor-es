@@ -136,14 +136,14 @@ npm run cov-e2e
 
 ## Verification
 
-- start kafka server, start elasticsearch, initialize Elasticsearch, start processor app
+- start kafka server, start elasticsearch, initialize Elasticsearch `npm run init-es force`, start processor app `npm run`
 
-- run command `npm run view-data 173803d3-019e-4033-b1cf-d7205c7f774c` to view the test challenge doc created by `init-es`
+- Open new terminal and run command `npm run view-data 173803d3-019e-4033-b1cf-d7205c7f774c` to view the test challenge doc created by `init-es`
 
 ```bash
 npm run view-data 173803d3-019e-4033-b1cf-d7205c7f774c
 ```
-- It should display the following message
+- It should display the following message.
 
 ```bash
 info: Elasticsearch data:
