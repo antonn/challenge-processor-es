@@ -144,11 +144,11 @@ npm run cov-e2e
 export ES_INDEX=challenge
 ```
 
-- start processor app `npm run`
+- start processor app `npm start`
 
-- Open new terminal, initialize Elasticsearch `npm run init-es force`, 
+- Open new terminal, initialize Elasticsearch `npm run init-es force`
 
-- Run command `npm run view-data 173803d3-019e-4033-b1cf-d7205c7f774c` to verify the test challenge doc created by `init-es` 
+- Run command `npm run view-data 173803d3-019e-4033-b1cf-d7205c7f774c` to verify the test challenge doc created by `init-es`
 
 ```bash
 npm run view-data 173803d3-019e-4033-b1cf-d7205c7f774c
